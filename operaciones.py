@@ -1,4 +1,4 @@
-"""Funciones de cálculo para el gestor de notas."""
+"""Funciones de cálculo para el gestor de notas (conservadas del proyecto original)."""
 
 NOTA_MINIMA = 3.0
 
