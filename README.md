@@ -1,33 +1,65 @@
 # Gestor de Notas Estudiantiles
 
-Programa sencillo en Python para registrar estudiantes, calcular su promedio
-y saber si aprueban o reprueban la materia.
-
-## Archivos del proyecto
-
-| Archivo | Descripción |
-|---|---|
-| `main.py` | Programa principal con el menú de opciones |
-| `operaciones.py` | Funciones para calcular promedios y estados |
-| `datos/estudiantes.csv` | Lista de estudiantes con sus notas |
-
-## Cómo ejecutarlo
-
-1. Tener instalado Python 3.
-2. Abrir una terminal dentro de la carpeta del proyecto.
-3. Ejecutar:
-
-```
-python main.py
-```
+Aplicación web desarrollada en Python para registrar estudiantes, administrar sus calificaciones y calcular automáticamente su promedio académico.
 
 ## Funcionalidades
 
-- Ver la lista de estudiantes con su promedio.
-- Agregar un estudiante nuevo con sus tres notas.
-- Ver el mejor promedio del curso.
-- Guardar los cambios en el archivo CSV.
+- Registrar estudiantes con tres calificaciones.
+- Consultar el listado de estudiantes.
+- Editar y eliminar registros (CRUD).
+- Calcular el promedio de las tres notas.
+- Determinar si el estudiante aprueba (promedio mayor o igual a 3.0) o reprueba.
+- Consultar el estudiante con mejor promedio.
+- Guardar la información en una base de datos SQLite.
 
-## Escala de notas
+## Tecnologías utilizadas
 
-Las notas van de 0.0 a 5.0. Un estudiante aprueba con un promedio de 3.0 o más.
+- **Python:** lógica y procesamiento de datos.
+- **Flask:** servidor web y API.
+- **HTML, CSS y JavaScript:** interfaz web.
+- **SQLite:** almacenamiento persistente de estudiantes.
+
+## Estructura del proyecto
+
+```text
+gestor-notas/
+├── app.py
+├── database.py
+├── operaciones.py
+├── requirements.txt
+├── .gitignore
+└── frontend/
+    ├── index.html
+    ├── styles.css
+    └── app.js
+```
+
+## Instalación y ejecución
+
+**1.** Descargar o clonar el repositorio.
+
+**2.** Abrir la carpeta del proyecto en Visual Studio Code.
+
+**3.** Instalar las dependencias:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+**4.** Ejecutar la aplicación:
+
+```bash
+python app.py
+```
+
+**5.** Abrir en el navegador:
+
+http://127.0.0.1:5000
+
+## Base de datos y persistencia
+
+La aplicación utiliza SQLite para almacenar los estudiantes y sus notas.
+
+La base de datos se crea automáticamente en `datos/gestor_notas.db` cuando se inicia el sistema por primera vez.
+
+Los registros permanecen guardados aunque se cierre y vuelva a ejecutar la aplicación.
